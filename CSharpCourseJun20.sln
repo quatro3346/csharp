@@ -21,7 +21,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IntegerNumber", "IntegerNum
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OddEven", "OddEven\OddEven.csproj", "{39D4AF53-C4E2-46BB-AF26-51E1DD04FD0C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Apartment", "Apartment\Apartment.csproj", "{91CA524C-E551-4777-AD59-0D68225D2E16}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Apartment", "Apartment\Apartment.csproj", "{91CA524C-E551-4777-AD59-0D68225D2E16}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

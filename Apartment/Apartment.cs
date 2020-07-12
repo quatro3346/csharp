@@ -31,21 +31,16 @@ namespace Apartment
             if (apartment > totalNumberApartments)
                 Console.WriteLine("Квартиры с таким номером нет в доме");
 
-            if (apartment % totalNumberApartments == 0)
-            {
-                entrance = apartment / totalNumberApartments;
-                Console.WriteLine("Подъезд: " + entrance);
-            }
+            if (apartment % totalNumberApartmentsEntrance == 0)
+                entrance = apartment / totalNumberApartmentsEntrance;
             else
-            {
-                entrance = apartment / totalNumberApartments + 1;
-                Console.WriteLine("Подъезд: " + entrance);
-            }
+                entrance = apartment / totalNumberApartmentsEntrance + 1;
+            Console.WriteLine("Подъезд: " + entrance);
 
-            floor = numberFloors - (totalNumberApartmentsEntrance * entrance) % apartment / apartmentsFloor;
+            floor = numberFloors - ((totalNumberApartmentsEntrance * entrance - apartment) / apartmentsFloor);
             Console.WriteLine("Этаж: " + floor);
 
-            position = (entrance - 1) * totalNumberApartmentsEntrance + ((floor - 1) * numberFloors) + 1;
+            position = (entrance - 1) * totalNumberApartmentsEntrance + ((floor - 1) * apartmentsFloor) + 1;
 
             positionApartment = apartment - position + 1;
             if (positionApartment == 1)
