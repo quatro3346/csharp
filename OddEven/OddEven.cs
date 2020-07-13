@@ -12,15 +12,21 @@ namespace OddEven
             Console.WriteLine("Введите целое число:");
             number = Convert.ToInt32(Console.ReadLine());
             if (number % 2 == 0)
+            {
                 Console.WriteLine("Данное число - четное");
-            else if (number 0)
-                Console.WriteLine("Данное число - 0");
+            }
             else
+            {
                 Console.WriteLine("Данное число - нечетное");
+            }
             if (number % 5 == 0)
+            {
                 Console.WriteLine("Данное число кратно 5");
+            }
             else
+            {
                 Console.WriteLine("Данное число не кратно 5");
+            }
         }
     }
 }

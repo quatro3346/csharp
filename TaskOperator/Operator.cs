@@ -12,8 +12,8 @@ namespace Operator
             int additionIntegers = a + b;
             Console.WriteLine("Addition integers = " + additionIntegers);
 
-            int substractIntegers = a - b;
-            Console.WriteLine("Substract integers = " + substractIntegers);
+            int subtractIntegers = a - b;
+            Console.WriteLine("Subtract integers = " + subtractIntegers);
 
             int divisionIntegers = a / b;
             Console.WriteLine("Division integers = " + divisionIntegers);
@@ -31,8 +31,8 @@ namespace Operator
             double additionRealNumbers = c + d;
             Console.WriteLine("Addition real numbers = " + additionRealNumbers);
 
-            double substractRealNumbers = c - d;
-            Console.WriteLine("Subsract real numbers = " + substractRealNumbers);
+            double subtractRealNumbers = c - d;
+            Console.WriteLine("Subtract real numbers = " + subtractRealNumbers);
 
             double divisionRealNumbers = c / d;
             Console.WriteLine("Division real numbers = " + divisionRealNumbers);

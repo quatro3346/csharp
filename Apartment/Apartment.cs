@@ -6,51 +6,66 @@ namespace Apartment
     {
         static void Main(string[] args)
         {
-            int numberFloors;
-            int numberEntrances;
-            int totalNumberApartments;
-            int totalNumberApartmentsEntrance;
-            int entrance;
-            int floor;
+            int floorsCount;
+            int entrancesCount;
+            int totalApartments;
+            int totalApartmentsEntrance;
+            int requiredEntrance;
+            int requiredFloor;
             int apartment;
-            const int apartmentsFloor = 4;
-            int position;
-            int positionApartment;
+            const int apartmentsOnFloor = 4;
+            int firstApartmentOnFloor;
+            int apartmentPosition;
 
             Console.WriteLine("Введите количество этажей:");
-            numberFloors = Convert.ToInt32(Console.ReadLine());
+            floorsCount = Convert.ToInt32(Console.ReadLine());
 
             Console.WriteLine("Введите количество подъездов:");
-            numberEntrances = Convert.ToInt32(Console.ReadLine());
+            entrancesCount = Convert.ToInt32(Console.ReadLine());
 
-            totalNumberApartments = numberEntrances * numberFloors * apartmentsFloor;
-            totalNumberApartmentsEntrance = numberFloors * apartmentsFloor;
+            totalApartments = entrancesCount * floorsCount * apartmentsOnFloor;
+            totalApartmentsEntrance = floorsCount * apartmentsOnFloor;
 
             Console.WriteLine("Введите номер квартиры:");
             apartment = Convert.ToInt32(Console.ReadLine());
-            if (apartment > totalNumberApartments)
+            if (apartment > totalApartments)
+            {
                 Console.WriteLine("Квартиры с таким номером нет в доме");
+                return;
+            }
 
-            if (apartment % totalNumberApartmentsEntrance == 0)
-                entrance = apartment / totalNumberApartmentsEntrance;
+            if (apartment % totalApartmentsEntrance == 0)
+            { 
+                requiredEntrance = apartment / totalApartmentsEntrance; 
+            }
             else
-                entrance = apartment / totalNumberApartmentsEntrance + 1;
-            Console.WriteLine("Подъезд: " + entrance);
+            { 
+                requiredEntrance = apartment / totalApartmentsEntrance + 1;
+            }
+            Console.WriteLine("Подъезд: " + requiredEntrance);
 
-            floor = numberFloors - ((totalNumberApartmentsEntrance * entrance - apartment) / apartmentsFloor);
-            Console.WriteLine("Этаж: " + floor);
+            requiredFloor = floorsCount - ((totalApartmentsEntrance * requiredEntrance - apartment) / apartmentsOnFloor);
+            Console.WriteLine("Этаж: " + requiredFloor);
 
-            position = (entrance - 1) * totalNumberApartmentsEntrance + ((floor - 1) * apartmentsFloor) + 1;
+            firstApartmentOnFloor = (requiredEntrance - 1) * totalApartmentsEntrance + ((requiredFloor - 1) * apartmentsOnFloor) + 1;
 
-            positionApartment = apartment - position + 1;
-            if (positionApartment == 1)
+            apartmentPosition = apartment - firstApartmentOnFloor + 1;
+            if (apartmentPosition == 1)
+            {
                 Console.WriteLine("Ближняя слева");
-            else if (positionApartment == 2)
+            }
+            else if (apartmentPosition == 2)
+            {
                 Console.WriteLine("Дальняя слева");
-            else if (positionApartment == 3)
+            }
+            else if (apartmentPosition == 3)
+            {
                 Console.WriteLine("Дальняя справа");
+            }
             else
+            {
                 Console.WriteLine("Ближняя справа");
+            }
         }
     }
 }

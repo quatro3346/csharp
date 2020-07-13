@@ -3,13 +3,13 @@
 namespace Circle
 {
     /// <summary>
-    /// Этот класс c названием домашнего задания - ExerciseCircle
+    /// Этот класс c названием домашнего задания - Circle
     /// </summary>
     class Circle
     {
         static void Main(string[] args)
         {
-            //радиус стадиона указан в метрах
+            // радиус стадиона указан в метрах
             double stadiumRadius = 15.0;
 
             double stadiumArea = Math.PI * Math.Pow(stadiumRadius, 2);
@@ -18,12 +18,12 @@ namespace Circle
             double stadiumCircumference = 2 * Math.PI * stadiumRadius;
             Console.WriteLine("Stadium circumference = " + stadiumCircumference);
 
-            double domeBaseArea = 275.0;/*площадь задана по
+            double domeBaseArea = 275.0; /* площадь задана по
                                                       окружности купола*/
             double domeRadius = Math.Sqrt(domeBaseArea / Math.PI);
             Console.WriteLine("Dome radius = " + domeRadius);
 
-            //TODO:угол задан в градусах, потом перевести в радианы и переписать код
+            //TODO: угол задан в градусах, потом перевести в радианы и переписать код
             double radius = 83.0;
             double angleInDegrees = 138.0;
 
