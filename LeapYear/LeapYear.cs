@@ -6,18 +6,16 @@ namespace LeapYear
     {
         static void Main(string[] args)
         {
-            int year;
-
             Console.WriteLine("Введите год:");
-            year = Convert.ToInt32(Console.ReadLine());
+            int year = Convert.ToInt32(Console.ReadLine());
 
-            if (year % 4 == 0)
+            if (year % 4 != 0 || year % 100 == 0 && year % 400 != 0)
             {
-                Console.WriteLine(year + " - високосный год");
+                Console.WriteLine(year + " - невисокосный год");
             }
             else
             {
-                Console.WriteLine(year + " - невисокосный год");
+                Console.WriteLine(year + " - високосный год");
             }
         }
     }

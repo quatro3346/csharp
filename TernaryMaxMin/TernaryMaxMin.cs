@@ -6,17 +6,13 @@ namespace TernaryMaxMin
     {
         static void Main(string[] args)
         {
-            int firstNumber;
-            int secondNumber;
-            int max;
-            int min;
+            Console.WriteLine("Введите целое число:");
+            int number1 = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Введите целое число:");
+            int number2 = Convert.ToInt32(Console.ReadLine());
 
-            Console.WriteLine("Введите 2 целых числа:");
-            firstNumber = Convert.ToInt32(Console.ReadLine());
-            secondNumber = Convert.ToInt32(Console.ReadLine());
-
-            max = (firstNumber > secondNumber) ? firstNumber : secondNumber;
-            min = (firstNumber < secondNumber) ? firstNumber : secondNumber;
+            int max = (number1 > number2) ? number1 : number2;
+            int min = (number1 < number2) ? number1 : number2;
             Console.WriteLine("Наибольшее число: " + max);
             Console.WriteLine("Наименьшее число: " + min);
         }

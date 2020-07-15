@@ -9,17 +9,17 @@ namespace Password
             string password = "qwerty";
             
             Console.WriteLine("Введите пароль: ");
-            string userPassword = Console.ReadLine();
+            string introducedPassword = Console.ReadLine();
 
-            if (password.Equals(userPassword))
+            if (password.Equals(introducedPassword))
             {
                 Console.WriteLine("Пароль верный");
             }
-            else if (userPassword.Length > password.Length)
+            else if (introducedPassword.Length > password.Length)
             {
                 Console.WriteLine("Пароль неверный, введеная строка слишком длинная");
             }
-            else if (userPassword.Length < password.Length)
+            else if (introducedPassword.Length < password.Length)
             {
                 Console.WriteLine("Пароль неверный, введеная строка слишком короткая");
             }
